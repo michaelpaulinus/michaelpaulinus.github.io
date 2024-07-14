@@ -26,5 +26,6 @@ export default {
     :prepend-icon="prependIcon"
     :text="text"
     :href="redirectLink"
+    variant="outlined"
   />
 </template>

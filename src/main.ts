@@ -13,11 +13,6 @@ const vuetify = createVuetify({
   theme: {
     defaultTheme: 'light'
   },
-  defaults: {
-    VBtn: {
-      variant: 'outlined'
-    }
-  },
   components,
   directives
 })
