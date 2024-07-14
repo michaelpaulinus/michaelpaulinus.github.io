@@ -241,7 +241,6 @@ h2 {
   margin: 0 auto;
   max-height: 20rem;
   max-width: 15rem;
-  border: red solid;
 }
 
 .button-container {
