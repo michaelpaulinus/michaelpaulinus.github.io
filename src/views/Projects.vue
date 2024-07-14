@@ -85,7 +85,7 @@ export default {
   </div>
 
   <div class="project-container">
-    <v-list lines="two">
+    <v-list lines="two" bg-color="transparent">
       <v-list-item v-for="item in projects" :key="item.url">
         <v-card :href="item.url" target="_blank" variant="outlined">
           <v-row align="center">

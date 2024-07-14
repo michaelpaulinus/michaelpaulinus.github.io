@@ -37,7 +37,7 @@ export default {
 </script>
 
 <template>
-  <v-list lines="one">
+  <v-list lines="one" bg-color="transparent">
     <v-list-item
       v-for="(item, index) in normalizedItems"
       :key="index"
