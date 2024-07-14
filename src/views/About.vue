@@ -207,22 +207,25 @@ h2 {
 
 .container {
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
+  gap: 8rem;
 }
 
 @media (max-width: 600px) {
   .container {
     flex-direction: column;
+    gap: 0.5rem;
   }
 }
 
 .container-header {
   display: flex;
+  width: 5%;
 }
 
 .container-content {
   display: flex;
+  width: 95%;
 }
 
 .carousel-container {
@@ -236,6 +239,14 @@ h2 {
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
   grid-gap: 0.625rem;
+}
+
+@media (max-width: 600px) {
+  .button-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
 .page-header {
