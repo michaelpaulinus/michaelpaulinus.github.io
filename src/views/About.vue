@@ -209,11 +209,13 @@ h2 {
   display: flex;
   flex-direction: row;
   gap: 8rem;
+  border: red solid;
 }
 
 @media (max-width: 600px) {
   .container {
     flex-direction: column;
+    justify-content: center;
     gap: 0.5rem;
   }
 }
@@ -225,7 +227,8 @@ h2 {
 
 .container-content {
   display: flex;
-  width: 95%;
+  width: 100%;
+  border: blue solid;
 }
 
 .carousel-container {
