@@ -8,10 +8,12 @@ import graduationImg from '/images/graduation.jpg'
 import type ExperienceItem from '@/models/ExperienceItem'
 import type EducationItem from '@/models/EducationItem'
 import ContactButton from '@/components/ContactButton.vue'
+import TimelineList from '@/components/TimelineList.vue'
 
 export default {
   components: {
-    ContactButton
+    ContactButton,
+    TimelineList
   },
 
   data() {
@@ -134,19 +136,7 @@ export default {
         development industry.
       </p>
       <br />
-      <v-list lines="one">
-        <v-list-item
-          v-for="(item, index) in experience"
-          :key="index"
-          :href="item.url"
-          :prepend-avatar="item.imageSrc"
-          target="_blank"
-        >
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
-          <v-list-item-subtitle>{{ item.company }}</v-list-item-subtitle>
-          <template v-slot:append> {{ item.time }}</template>
-        </v-list-item>
-      </v-list>
+      <timeline-list :items="experience" />
     </div>
   </div>
 
@@ -157,19 +147,7 @@ export default {
       <h2>Education</h2>
     </div>
     <div class="content">
-      <v-list lines="one">
-        <v-list-item
-          v-for="(item, index) in education"
-          :key="index"
-          :href="item.url"
-          :prepend-avatar="item.imageSrc"
-          target="_blank"
-        >
-          <v-list-item-title>{{ item.course }}</v-list-item-title>
-          <v-list-item-subtitle>{{ item.university }}</v-list-item-subtitle>
-          <template v-slot:append> {{ item.time }}</template>
-        </v-list-item>
-      </v-list>
+      <timeline-list :items="education" />
     </div>
   </div>
 </template>
