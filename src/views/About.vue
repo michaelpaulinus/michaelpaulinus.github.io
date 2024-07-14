@@ -99,7 +99,9 @@ export default {
 
   <div class="carousel-container">
     <v-carousel :cycle="true" :hide-delimiters="true" :show-arrows="false">
-      <v-carousel-item v-for="pictureUrl in pictures" :src="pictureUrl" />
+      <v-carousel-item v-for="pictureUrl in pictures">
+        <v-img :src="pictureUrl" class="rounded-pill" />
+      </v-carousel-item>
     </v-carousel>
   </div>
 
