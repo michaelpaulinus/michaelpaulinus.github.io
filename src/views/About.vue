@@ -7,11 +7,12 @@ import goldReefImg from '/images/gold-reef-city.jpeg'
 import graduationImg from '/images/graduation.jpg'
 import type ExperienceItem from '@/models/ExperienceItem'
 import type EducationItem from '@/models/EducationItem'
+import ContactButton from '@/components/ContactButton.vue'
 
 export default {
-  setup() {},
-
-  methods: {},
+  components: {
+    ContactButton
+  },
 
   data() {
     return {
@@ -100,44 +101,28 @@ export default {
     <div class="content">
       <p>You can reach out to me on any of the following platforms.</p>
       <br />
-      <section class="button-container">
-        <v-btn
-          href="mailto:michaelpaulinus@gmail.com"
-          target="_blank"
-          prepend-icon="mdi-gmail"
-          append-icon="mdi-arrow-top-right"
-          style="grid-row: 1; grid-column: 1; justify-content: space-between"
-          size="large"
-          >Email</v-btn
-        >
-        <v-btn
-          href="https://github.com/michaelpaulinus"
-          target="_blank"
-          prepend-icon="mdi-github"
-          append-icon="mdi-arrow-top-right"
-          style="grid-row: 1; grid-column: 2; justify-content: space-between"
-          size="large"
-          >GitHub</v-btn
-        >
-        <v-btn
-          href="https://www.instagram.com/michael_paulinus/"
-          target="_blank"
-          prepend-icon="mdi-instagram"
-          append-icon="mdi-arrow-top-right"
-          style="grid-row: 2; grid-column: 1; justify-content: space-between"
-          size="large"
-          >Instagram</v-btn
-        >
-        <v-btn
-          href="https://www.linkedin.com/in/michaelpaulinus/"
-          target="_blank"
-          prepend-icon="mdi-linkedin"
-          append-icon="mdi-arrow-top-right"
-          style="grid-row: 2; grid-column: 2; justify-content: space-between"
-          size="large"
-          >LinkedIn</v-btn
-        >
-      </section>
+      <div class="button-container">
+        <contact-button
+          :redirect-link="'mailto:michaelpaulinus@gmail.com'"
+          :prepend-icon="'mdi-gmail'"
+          :text="'Email'"
+        />
+        <contact-button
+          :redirect-link="'https://github.com/michaelpaulinus'"
+          :prepend-icon="'mdi-github'"
+          :text="'GitHub'"
+        />
+        <contact-button
+          :redirect-link="'https://www.instagram.com/michael_paulinus/'"
+          :prepend-icon="'mdi-instagram'"
+          :text="'Instagram'"
+        />
+        <contact-button
+          :redirect-link="'https://www.linkedin.com/in/michaelpaulinus/'"
+          :prepend-icon="'mdi-linkedin'"
+          :text="'LinkedIn'"
+        />
+      </div>
     </div>
   </div>
 
