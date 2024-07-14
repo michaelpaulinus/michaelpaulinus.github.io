@@ -189,6 +189,8 @@ export default {
       </div>
     </div>
 
+    <br />
+
     <div class="container">
       <div class="container-header">
         <h2>Certifications</h2>
@@ -208,8 +210,9 @@ h2 {
 .container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 8rem;
-  border: red solid;
+  width: 100vw;
 }
 
 @media (max-width: 600px) {
@@ -221,14 +224,11 @@ h2 {
 }
 
 .container-header {
-  display: flex;
   width: 5%;
 }
 
 .container-content {
-  display: flex;
   width: 100%;
-  border: blue solid;
 }
 
 .carousel-container {
