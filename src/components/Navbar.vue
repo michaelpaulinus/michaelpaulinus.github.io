@@ -1,14 +1,10 @@
 <script lang="ts">
-import About from './About.vue'
-import Projects from './Projects.vue'
+import About from '@/views/About.vue'
+import Projects from '@/views/Projects.vue'
 import { useTheme } from 'vuetify'
 
 export default {
   components: { About, Projects },
-
-  mounted() {
-    this.getPreferredColorScheme()
-  },
 
   data() {
     return {
@@ -34,6 +30,10 @@ export default {
       getPreferredColorScheme,
       toggleTheme
     }
+  },
+
+  mounted() {
+    this.getPreferredColorScheme()
   }
 }
 </script>
@@ -41,16 +41,16 @@ export default {
 <template>
   <v-app-bar style="margin: 0 auto">
     <v-tabs v-model="tab" align-tabs="center" style="margin: 0 auto">
-      <v-tab value="one">About</v-tab>
-      <v-tab value="two">Projects</v-tab>
+      <v-tab value="one" :text="'About'" />
+      <v-tab value="two" :text="'Projects'" />
     </v-tabs>
-    <v-btn icon="mdi-theme-light-dark" @click="toggleTheme"></v-btn>
+    <v-btn icon="mdi-theme-light-dark" @click="toggleTheme" />
   </v-app-bar>
 
   <div class="page-content" style="padding-top: 5%">
     <v-window v-model="tab">
-      <v-window-item class="tabs" value="one"><About></About></v-window-item>
-      <v-window-item value="two"><Projects></Projects></v-window-item>
+      <v-window-item value="one"><About /></v-window-item>
+      <v-window-item value="two"><Projects /></v-window-item>
     </v-window>
   </div>
 </template>
