@@ -5,6 +5,9 @@ import ukznLogo from '/images/ukzn_logo.jpeg'
 import cradleMoonImg from '/images/cradle-moon.jpeg'
 import goldReefImg from '/images/gold-reef-city.jpeg'
 import graduationImg from '/images/graduation.jpg'
+import awsLogo from '/images/amazon_web_services_logo.jpg'
+import googleLogo from '/images/google_logo.jpg'
+import microsoftLogo from '/images/microsoft_logo.jpg'
 import type ExperienceItem from '@/models/ExperienceItem'
 import type EducationItem from '@/models/EducationItem'
 import ContactButton from '@/components/ContactButton.vue'
@@ -20,6 +23,7 @@ export default {
     return {
       experience: [] as ExperienceItem[],
       education: [] as EducationItem[],
+      certification: [] as EducationItem[],
       pictures: [cradleMoonImg, goldReefImg, graduationImg]
     }
   },
@@ -48,6 +52,7 @@ export default {
         url: 'https://www.linkedin.com/school/university-of-kwazulu-natal/'
       }
     ]
+
     this.education = [
       {
         course: 'BSc (Eng) Electronic Engineering',
@@ -55,6 +60,30 @@ export default {
         imageSrc: ukznLogo,
         time: 'Feb 2018 - Dec 2021',
         url: 'https://ww2.ukzn.ac.za/'
+      }
+    ]
+
+    this.certification = [
+      {
+        course: 'AWS Certified Cloud Practitioner',
+        university: 'Amazon Web Services',
+        imageSrc: awsLogo,
+        time: 'Mar 2024',
+        url: 'https://www.credly.com/badges/6766c8bb-3374-416e-b98f-324705d96cd3/linked_in_profile'
+      },
+      {
+        course: 'Cloud Digital Leader',
+        university: 'Google Cloud',
+        imageSrc: googleLogo,
+        time: 'May 2024',
+        url: 'https://www.credly.com/badges/bc2e4d33-18d0-4390-b360-1744a5b567df/linked_in_profile/'
+      },
+      {
+        course: 'Microsoft Certified: Azure Fundamentals',
+        university: 'Microsoft',
+        imageSrc: microsoftLogo,
+        time: 'Jun 2024',
+        url: 'https://learn.microsoft.com/en-za/users/michaelpaulinus-9102/credentials/f5d31b456427741c?ref=https%3A%2F%2Fwww.linkedin.com%2F'
       }
     ]
   }
@@ -148,6 +177,15 @@ export default {
     </div>
     <div class="content">
       <timeline-list :items="education" />
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="header">
+      <h2>Certifications</h2>
+    </div>
+    <div class="content">
+      <timeline-list :items="certification" />
     </div>
   </div>
 </template>
