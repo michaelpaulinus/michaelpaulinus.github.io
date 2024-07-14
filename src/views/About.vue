@@ -102,7 +102,13 @@ export default {
       <div class="carousel-container">
         <v-carousel :cycle="true" :hide-delimiters="true" :show-arrows="false">
           <v-carousel-item v-for="pictureUrl in pictures">
-            <v-img :src="pictureUrl" class="rounded-xl" />
+            <v-img
+              :src="pictureUrl"
+              class="rounded-xl"
+              max-height="20rem"
+              max-width="15rem"
+              cover
+            />
           </v-carousel-item>
         </v-carousel>
       </div>
@@ -233,8 +239,9 @@ h2 {
 
 .carousel-container {
   margin: 0 auto;
-  max-height: 18rem;
-  max-width: 12rem;
+  max-height: 20rem;
+  max-width: 15rem;
+  border: red solid;
 }
 
 .button-container {
