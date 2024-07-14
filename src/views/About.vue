@@ -69,21 +69,21 @@ export default {
         university: 'Amazon Web Services',
         imageSrc: awsLogo,
         time: 'Mar 2024',
-        url: 'https://www.credly.com/badges/6766c8bb-3374-416e-b98f-324705d96cd3/linked_in_profile'
+        url: 'https://www.credly.com/badges/6766c8bb-3374-416e-b98f-324705d96cd3/public_url'
       },
       {
         course: 'Cloud Digital Leader',
         university: 'Google Cloud',
         imageSrc: googleLogo,
         time: 'May 2024',
-        url: 'https://www.credly.com/badges/bc2e4d33-18d0-4390-b360-1744a5b567df/linked_in_profile/'
+        url: 'https://www.credly.com/badges/bc2e4d33-18d0-4390-b360-1744a5b567df/public_url'
       },
       {
         course: 'Microsoft Certified: Azure Fundamentals',
         university: 'Microsoft',
         imageSrc: microsoftLogo,
         time: 'Jun 2024',
-        url: 'https://learn.microsoft.com/en-za/users/michaelpaulinus-9102/credentials/f5d31b456427741c?ref=https%3A%2F%2Fwww.linkedin.com%2F'
+        url: 'https://learn.microsoft.com/api/credentials/share/en-us/MichaelPaulinus-9102/F5D31B456427741C?sharingId=A3348AD9AF994697'
       }
     ]
   }
