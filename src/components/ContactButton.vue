@@ -20,11 +20,11 @@ export default {
 <template>
   <v-btn
     class="d-flex justify-space-between text-truncate"
-    :href="redirectLink"
-    target="_blank"
-    :prepend-icon="prependIcon"
     append-icon="mdi-arrow-top-right"
     size="large"
+    target="_blank"
+    :prepend-icon="prependIcon"
     :text="text"
+    :href="redirectLink"
   />
 </template>
