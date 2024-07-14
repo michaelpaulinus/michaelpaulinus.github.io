@@ -206,27 +206,23 @@ h2 {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto;
-  grid-gap: 3rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 @media (max-width: 600px) {
   .container {
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
+    flex-direction: column;
   }
 }
 
 .container-header {
   display: flex;
-  justify-content: center;
 }
 
 .container-content {
   display: flex;
-  justify-content: center;
 }
 
 .carousel-container {
