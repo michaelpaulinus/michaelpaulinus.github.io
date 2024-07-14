@@ -100,7 +100,7 @@ export default {
   <div class="carousel-container">
     <v-carousel :cycle="true" :hide-delimiters="true" :show-arrows="false">
       <v-carousel-item v-for="pictureUrl in pictures">
-        <v-img :src="pictureUrl" class="rounded-pill" />
+        <v-img :src="pictureUrl" class="rounded-xl" />
       </v-carousel-item>
     </v-carousel>
   </div>
@@ -201,27 +201,26 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .carousel-container {
-  max-height: 300px;
-  max-width: 300px;
   margin: 0 auto;
+  max-height: 18rem;
+  max-width: 12rem;
 }
 
 .button-container {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
-  grid-gap: 10px;
+  grid-gap: 0.625rem;
 }
 
 .header {
   flex-basis: 30%;
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
 
 .content {
