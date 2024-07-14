@@ -68,7 +68,7 @@ export default {
 
   <div class="carousel-container">
     <v-carousel :cycle="true" :hide-delimiters="true" :show-arrows="false">
-      <v-carousel-item v-for="picture in pictures" :src="picture" />
+      <v-carousel-item v-for="pictureUrl in pictures" :src="pictureUrl" />
     </v-carousel>
   </div>
 
