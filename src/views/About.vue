@@ -91,103 +91,111 @@ export default {
 </script>
 
 <template>
-  <div class="container">
-    <h1 style="margin: 0 auto; font-weight: 700; font-size: 3em">About/Michael</h1>
-  </div>
-
-  <br />
-
-  <div class="carousel-container">
-    <v-carousel :cycle="true" :hide-delimiters="true" :show-arrows="false">
-      <v-carousel-item v-for="pictureUrl in pictures">
-        <v-img :src="pictureUrl" class="rounded-xl" />
-      </v-carousel-item>
-    </v-carousel>
-  </div>
-
-  <br />
-
-  <div class="container">
-    <div class="header">
-      <h2>About</h2>
+  <div>
+    <div class="container">
+      <h1 class="page-header">About/Michael</h1>
     </div>
-    <div class="content">
-      <p>
-        Hello, my name is Michael Paulinus, and I am a software engineer from South Africa. I hold a
-        BSc(Eng) in Electronic Engineering from the University of KwaZulu-Natal, where I gained a
-        deep understanding of software development principles, including design patterns, data
-        structures, algorithms, and software testing methodologies.
-      </p>
-    </div>
-  </div>
 
-  <br />
+    <br />
 
-  <div class="container">
-    <div class="header">
-      <h2>Contact</h2>
-    </div>
-    <div class="content">
-      <p>You can reach out to me on any of the following platforms.</p>
-      <br />
-      <div class="button-container">
-        <contact-button
-          :redirect-link="'mailto:michaelpaulinus@gmail.com'"
-          :prepend-icon="'mdi-gmail'"
-          :text="'Email'"
-        />
-        <contact-button
-          :redirect-link="'https://github.com/michaelpaulinus'"
-          :prepend-icon="'mdi-github'"
-          :text="'GitHub'"
-        />
-        <contact-button
-          :redirect-link="'https://www.instagram.com/michael_paulinus/'"
-          :prepend-icon="'mdi-instagram'"
-          :text="'Instagram'"
-        />
-        <contact-button
-          :redirect-link="'https://www.linkedin.com/in/michaelpaulinus/'"
-          :prepend-icon="'mdi-linkedin'"
-          :text="'LinkedIn'"
-        />
+    <div>
+      <div class="carousel-container">
+        <v-carousel :cycle="true" :hide-delimiters="true" :show-arrows="false">
+          <v-carousel-item v-for="pictureUrl in pictures">
+            <v-img :src="pictureUrl" class="rounded-xl" />
+          </v-carousel-item>
+        </v-carousel>
       </div>
     </div>
-  </div>
 
-  <br />
+    <br />
 
-  <div class="container">
-    <div class="header">
-      <h2>Experience</h2>
+    <div class="container">
+      <div class="container-header">
+        <h2>About</h2>
+      </div>
+      <div class="container-content">
+        <p>
+          Hello, my name is Michael Paulinus, and I am a software engineer from South Africa. I hold
+          a BSc(Eng) in Electronic Engineering from the University of KwaZulu-Natal, where I gained
+          a deep understanding of software development principles, including design patterns, data
+          structures, algorithms, and software testing methodologies.
+        </p>
+      </div>
     </div>
-    <div class="content">
-      <p>
-        I've been working for {{ Number(new Date().getFullYear()) - 2022 }}+ years in the software
-        development industry.
-      </p>
-      <br />
-      <timeline-list :items="experience" />
-    </div>
-  </div>
 
-  <br />
+    <br />
 
-  <div class="container">
-    <div class="header">
-      <h2>Education</h2>
+    <div class="container">
+      <div class="container-header">
+        <h2>Contact</h2>
+      </div>
+      <div class="container-content">
+        <div>
+          <p>You can reach out to me on any of the following platforms.</p>
+          <br />
+          <div class="button-container">
+            <contact-button
+              :redirect-link="'mailto:michaelpaulinus@gmail.com'"
+              :prepend-icon="'mdi-gmail'"
+              :text="'Email'"
+            />
+            <contact-button
+              :redirect-link="'https://github.com/michaelpaulinus'"
+              :prepend-icon="'mdi-github'"
+              :text="'GitHub'"
+            />
+            <contact-button
+              :redirect-link="'https://www.instagram.com/michael_paulinus/'"
+              :prepend-icon="'mdi-instagram'"
+              :text="'Instagram'"
+            />
+            <contact-button
+              :redirect-link="'https://www.linkedin.com/in/michaelpaulinus/'"
+              :prepend-icon="'mdi-linkedin'"
+              :text="'LinkedIn'"
+            />
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="content">
-      <timeline-list :items="education" />
-    </div>
-  </div>
 
-  <div class="container">
-    <div class="header">
-      <h2>Certifications</h2>
+    <br />
+
+    <div class="container">
+      <div class="container-header">
+        <h2>Experience</h2>
+      </div>
+      <div class="container-content">
+        <div>
+          <p>
+            I've been working for {{ Number(new Date().getFullYear()) - 2022 }}+ years in the
+            software development industry.
+          </p>
+          <br />
+          <timeline-list :items="experience" />
+        </div>
+      </div>
     </div>
-    <div class="content">
-      <timeline-list :items="certification" />
+
+    <br />
+
+    <div class="container">
+      <div class="container-header">
+        <h2>Education</h2>
+      </div>
+      <div class="container-content">
+        <timeline-list :items="education" />
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="container-header">
+        <h2>Certifications</h2>
+      </div>
+      <div class="container-content">
+        <timeline-list :items="certification" />
+      </div>
     </div>
   </div>
 </template>
@@ -198,11 +206,27 @@ h2 {
 }
 
 .container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  grid-gap: 3rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+}
+
+.container-header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 0 auto;
-  padding: 1.25rem;
+  justify-content: center;
+}
+
+.container-content {
+  display: flex;
+  justify-content: center;
 }
 
 .carousel-container {
@@ -218,12 +242,9 @@ h2 {
   grid-gap: 0.625rem;
 }
 
-.header {
-  flex-basis: 30%;
-  margin-right: 1.25rem;
-}
-
-.content {
-  flex-basis: 65%;
+.page-header {
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 3em;
 }
 </style>
