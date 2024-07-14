@@ -1,11 +1,5 @@
 @import './base.css';
 
-#app {
-  max-width: 100%;
-  margin: 0 auto;
-  font-weight: normal;
-}
-
 .green {
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
@@ -16,13 +10,5 @@
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 24%, 64%, 0.2);
-    border-radius: 0.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
   }
 }
