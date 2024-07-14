@@ -18,9 +18,7 @@ export default {
     return {
       experience: [] as ExperienceItem[],
       education: [] as EducationItem[],
-      cradleMoonImg: cradleMoonImg,
-      goldReefImg: goldReefImg,
-      graduationImg: graduationImg
+      pictures: [cradleMoonImg, goldReefImg, graduationImg]
     }
   },
 
@@ -70,9 +68,7 @@ export default {
 
   <div class="carousel-container">
     <v-carousel :cycle="true" :hide-delimiters="true" :show-arrows="false">
-      <v-carousel-item :src="graduationImg"></v-carousel-item>
-      <v-carousel-item :src="cradleMoonImg"></v-carousel-item>
-      <v-carousel-item :src="goldReefImg"></v-carousel-item>
+      <v-carousel-item v-for="picture in pictures" :src="picture" />
     </v-carousel>
   </div>
 
