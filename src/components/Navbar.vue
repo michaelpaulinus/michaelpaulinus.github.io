@@ -2,6 +2,7 @@
 import About from '@/views/About.vue'
 import Projects from '@/views/Projects.vue'
 import { useTheme } from 'vuetify'
+import useThemeStore from '@/stores/theme'
 
 export default {
   components: { About, Projects },
@@ -14,16 +15,25 @@ export default {
 
   setup() {
     const theme = useTheme()
+    const themeStore = useThemeStore()
 
     function getPreferredColorScheme() {
-      theme.global.name.value =
-        window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-          ? 'dark'
-          : 'light'
+      if (!themeStore.mode) {
+        const userSystemPreference =
+          window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light'
+        theme.global.name.value = userSystemPreference
+        themeStore.mode = userSystemPreference
+      } else {
+        theme.global.name.value = themeStore.mode
+      }
     }
 
     function toggleTheme() {
-      theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
+      const userPreference = theme.global.current.value.dark ? 'light' : 'dark'
+      theme.global.name.value = userPreference
+      themeStore.mode = userPreference
     }
 
     return {
