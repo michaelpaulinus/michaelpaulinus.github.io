@@ -195,12 +195,14 @@
 			</div>
 			<div class="container-content">
 				<p>
-					Hello, my name is Michael Paulinus, and I am a software
-					engineer from South Africa. I hold a BSc(Eng) in Electronic
-					Engineering from the University of KwaZulu-Natal, where I
-					gained a deep understanding of software development
-					principles, including design patterns, data structures,
-					algorithms, and software testing methodologies.
+					Hello, my name is Michael Paulinus. I am a Full-Stack
+					Software Engineer with a BSc(Eng) in Electronic Engineering
+					from the University of KwaZulu-Natal. I'm a driven
+					individual that is passionate about creating innovative
+					solutions through code and have worked on various projects
+					using a diverse range of programming languages and
+					technologies including TypeScript, Vue.js, C#, Java, Python
+					and cloud platforms.
 				</p>
 			</div>
 		</div>
