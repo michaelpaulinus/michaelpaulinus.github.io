@@ -24,8 +24,8 @@
 			return {
 				experience: [] as ExperienceItem[],
 				education: [] as EducationItem[],
-				certification: [] as EducationItem[],
-				skill: [] as SkillItem[],
+				certifications: [] as EducationItem[],
+				skills: [] as SkillItem[],
 				pictures: [cradleMoonImg, goldReefImg, graduationImg],
 			};
 		},
@@ -65,7 +65,7 @@
 				},
 			];
 
-			this.certification = [
+			this.certifications = [
 				{
 					course: "AWS Certified Cloud Practitioner",
 					university: "Amazon Web Services",
@@ -89,7 +89,7 @@
 				},
 			];
 
-			this.skill = [
+			this.skills = [
 				{
 					icon: "mdi-vuejs",
 					name: "Vue.js",
@@ -276,7 +276,7 @@
 				<h2>Certifications</h2>
 			</div>
 			<div class="container-content">
-				<timeline-list :items="certification" />
+				<timeline-list :items="certifications" />
 			</div>
 		</div>
 
@@ -287,10 +287,10 @@
 			<div class="container-content">
 				<v-chips>
 					<v-chip
-						:prepend-icon="item.icon"
-						:text="item.name"
+						:prepend-icon="skill.icon"
+						:text="skill.name"
 						variant="outlined"
-						v-for="item in skill"
+						v-for="skill in skills"
 						style="margin-inline-end: 0.25rem; margin-block: 0.25rem"
 					/>
 				</v-chips>
