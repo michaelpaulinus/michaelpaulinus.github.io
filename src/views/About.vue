@@ -195,11 +195,12 @@
 			</div>
 			<div class="container-content">
 				<p>
-					Hello, my name is Michael Paulinus, and I am a software engineer from
-					South Africa. I hold a BSc(Eng) in Electronic Engineering from the
-					University of KwaZulu-Natal, where I gained a deep understanding of
-					software development principles, including design patterns, data
-					structures, algorithms, and software testing methodologies.
+					Hello, my name is Michael Paulinus, and I am a software
+					engineer from South Africa. I hold a BSc(Eng) in Electronic
+					Engineering from the University of KwaZulu-Natal, where I
+					gained a deep understanding of software development
+					principles, including design patterns, data structures,
+					algorithms, and software testing methodologies.
 				</p>
 			</div>
 		</div>
@@ -212,7 +213,10 @@
 			</div>
 			<div class="container-content">
 				<div>
-					<p>You can reach out to me on any of the following platforms.</p>
+					<p>
+						You can reach out to me on any of the following
+						platforms.
+					</p>
 					<br />
 					<div class="button-container">
 						<contact-button
@@ -249,8 +253,9 @@
 			<div class="container-content">
 				<div>
 					<p>
-						I've been working for {{ Number(new Date().getFullYear()) - 2022 }}+
-						years in the software development industry.
+						I've been working for
+						{{ Number(new Date().getFullYear()) - 2022 }}+ years in
+						the software development industry.
 					</p>
 					<br />
 					<timeline-list :items="experience" />
@@ -291,7 +296,10 @@
 						:text="skill.name"
 						variant="outlined"
 						v-for="skill in skills"
-						style="margin-inline-end: 0.25rem; margin-block: 0.25rem"
+						style="
+							margin-inline-end: 0.25rem;
+							margin-block: 0.25rem;
+						"
 					/>
 				</v-chips>
 			</div>

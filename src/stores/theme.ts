@@ -1,17 +1,17 @@
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia";
 
-const useThemeStore = defineStore('theme', {
-  persist: true,
+const useThemeStore = defineStore("theme", {
+	persist: true,
 
-  state: () => ({
-    mode: null as string | null
-  }),
+	state: () => ({
+		mode: null as string | null,
+	}),
 
-  actions: {
-    setTheme(mode: string) {
-      this.mode = mode
-    }
-  }
-})
+	actions: {
+		setTheme(mode: string) {
+			this.mode = mode;
+		},
+	},
+});
 
-export default useThemeStore
+export default useThemeStore;
