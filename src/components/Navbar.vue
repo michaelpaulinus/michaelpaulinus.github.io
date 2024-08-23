@@ -21,8 +21,7 @@
 				if (!themeStore.mode) {
 					const userSystemPreference =
 						window.matchMedia &&
-						window.matchMedia("(prefers-color-scheme: dark)")
-							.matches
+						window.matchMedia("(prefers-color-scheme: dark)").matches
 							? "dark"
 							: "light";
 					theme.global.name.value = userSystemPreference;
@@ -53,7 +52,9 @@
 </script>
 
 <template>
-	<v-app-bar style="margin: 0 auto">
+	<v-app-bar style="display: flex; justify-content: space-between">
+		<div class="btn-container" />
+
 		<v-tabs
 			v-model="tab"
 			align-tabs="center"
@@ -68,7 +69,9 @@
 				:text="'Projects'"
 			/>
 		</v-tabs>
+
 		<v-btn
+			class="btn-container"
 			icon="mdi-theme-light-dark"
 			@click="toggleTheme"
 		/>
@@ -82,4 +85,9 @@
 	</div>
 </template>
 
-<style></style>
+<style scoped>
+	.btn-container {
+		min-width: 3rem;
+		max-width: 3rem;
+	}
+</style>
