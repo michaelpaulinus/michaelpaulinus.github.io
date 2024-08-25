@@ -195,14 +195,13 @@
 			</div>
 			<div class="container-content">
 				<p>
-					Hello, my name is Michael Paulinus. I am a Full-Stack
-					Software Engineer with a BSc(Eng) in Electronic Engineering
-					from the University of KwaZulu-Natal. I'm a driven
-					individual that is passionate about creating innovative
-					solutions through code and have worked on various projects
-					using a diverse range of programming languages and
-					technologies including TypeScript, Vue.js, C#, Java, Python
-					and cloud platforms.
+					Hello, my name is Michael Paulinus. I am a Full-Stack Software
+					Engineer with a BSc(Eng) in Electronic Engineering from the University
+					of KwaZulu-Natal. I'm a driven individual that is passionate about
+					creating innovative solutions through code and have worked on various
+					projects using a diverse range of programming languages and
+					technologies including TypeScript, Vue.js, C#, Java, Python and cloud
+					platforms.
 				</p>
 			</div>
 		</div>
@@ -215,10 +214,7 @@
 			</div>
 			<div class="container-content">
 				<div>
-					<p>
-						You can reach out to me on any of the following
-						platforms.
-					</p>
+					<p>You can reach out to me on any of the following platforms.</p>
 					<br />
 					<div class="button-container">
 						<contact-button
@@ -256,8 +252,8 @@
 				<div>
 					<p>
 						I've been working for
-						{{ Number(new Date().getFullYear()) - 2022 }}+ years in
-						the software development industry.
+						{{ Number(new Date().getFullYear()) - 2022 }}+ years in the software
+						development industry.
 					</p>
 					<br />
 					<timeline-list :items="experience" />
@@ -292,18 +288,15 @@
 				<h2>Skills</h2>
 			</div>
 			<div class="container-content">
-				<v-chips>
+				<v-chip-group column>
 					<v-chip
 						:prepend-icon="skill.icon"
 						:text="skill.name"
 						variant="outlined"
 						v-for="skill in skills"
-						style="
-							margin-inline-end: 0.25rem;
-							margin-block: 0.25rem;
-						"
+						style="margin-inline-end: 0.25rem; margin-block: 0.25rem"
 					/>
-				</v-chips>
+				</v-chip-group>
 			</div>
 		</div>
 	</div>
