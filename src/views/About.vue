@@ -288,15 +288,13 @@
 				<h2>Skills</h2>
 			</div>
 			<div class="container-content">
-				<v-chip-group column>
-					<v-chip
-						:prepend-icon="skill.icon"
-						:text="skill.name"
-						variant="outlined"
-						v-for="skill in skills"
-						style="margin-inline-end: 0.25rem; margin-block: 0.25rem"
-					/>
-				</v-chip-group>
+				<v-chip
+					:prepend-icon="skill.icon"
+					:text="skill.name"
+					variant="outlined"
+					v-for="skill in skills"
+					style="margin-inline-end: 0.25rem; margin-block: 0.25rem"
+				/>
 			</div>
 		</div>
 	</div>
