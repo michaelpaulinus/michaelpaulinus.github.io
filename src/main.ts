@@ -26,7 +26,11 @@ pinia.use(piniaPluginPersistedstate);
 app.use(router);
 app.use(vuetify);
 app.use(pinia);
-app.use(VueGtag, {
-	config: { id: "G-QK8CGE9N8T" },
-});
+app.use(
+	VueGtag,
+	{
+		config: { id: "G-QK8CGE9N8T" },
+	},
+	router,
+);
 app.mount("#app");
