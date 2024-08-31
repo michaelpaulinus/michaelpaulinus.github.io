@@ -3,6 +3,7 @@
 	import Projects from "@/views/Projects.vue";
 	import { useTheme } from "vuetify";
 	import useThemeStore from "@/stores/theme";
+	import { screenview } from "vue-gtag";
 
 	export default {
 		components: { About, Projects },
@@ -48,6 +49,22 @@
 		mounted() {
 			this.getPreferredColorScheme();
 		},
+
+		methods: {
+			aboutBtnClicked() {
+				screenview({
+					screen_name: "About",
+					app_name: "Michael Paulinus",
+				});
+			},
+
+			projectsBtnClicked() {
+				screenview({
+					screen_name: "Projects",
+					app_name: "Michael Paulinus",
+				});
+			},
+		},
 	};
 </script>
 
@@ -63,10 +80,12 @@
 			<v-tab
 				value="one"
 				:text="'About'"
+				@click="aboutBtnClicked()"
 			/>
 			<v-tab
 				value="two"
 				:text="'Projects'"
+				@click="projectsBtnClicked()"
 			/>
 		</v-tabs>
 
