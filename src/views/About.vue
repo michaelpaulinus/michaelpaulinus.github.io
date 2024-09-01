@@ -8,11 +8,11 @@
 	import awsLogo from "/images/amazon_web_services_logo.jpg";
 	import googleLogo from "/images/google_logo.jpg";
 	import microsoftLogo from "/images/microsoft_logo.jpg";
-	import type ExperienceItem from "@/models/ExperienceItem";
-	import type EducationItem from "@/models/EducationItem";
+	import type Experience from "@/models/Experience";
+	import type Education from "@/models/Education";
 	import ContactButton from "@/components/ContactButton.vue";
 	import TimelineList from "@/components/TimelineList.vue";
-	import type SkillItem from "@/models/SkillItem";
+	import type Skill from "@/models/Skill";
 	import { screenview } from "vue-gtag";
 
 	export default {
@@ -23,10 +23,10 @@
 
 		data() {
 			return {
-				experience: [] as ExperienceItem[],
-				education: [] as EducationItem[],
-				certifications: [] as EducationItem[],
-				skills: [] as SkillItem[],
+				experience: [] as Experience[],
+				education: [] as Education[],
+				certifications: [] as Education[],
+				skills: [] as Skill[],
 				pictures: [cradleMoonImg, goldReefImg, graduationImg],
 			};
 		},
@@ -54,7 +54,7 @@
 					imageSrc: ukznLogo,
 					url: "https://www.linkedin.com/school/university-of-kwazulu-natal/",
 				},
-			] as ExperienceItem[];
+			] as Experience[];
 
 			this.education = [
 				{
@@ -88,7 +88,7 @@
 					time: "Jun 2024",
 					url: "https://learn.microsoft.com/api/credentials/share/en-us/MichaelPaulinus-9102/F5D31B456427741C?sharingId=A3348AD9AF994697",
 				},
-			] as EducationItem[];
+			] as Education[];
 
 			this.skills = [
 				{
@@ -155,7 +155,7 @@
 					icon: "mdi-file-document",
 					name: "Documentation",
 				},
-			] as SkillItem[];
+			] as Skill[];
 		},
 
 		methods: {

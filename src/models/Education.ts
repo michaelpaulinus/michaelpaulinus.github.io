@@ -1,4 +1,4 @@
-export default interface EducationItem {
+export default interface Education {
 	course: string;
 	university: string;
 	imageSrc: string;

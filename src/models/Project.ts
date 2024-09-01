@@ -1,4 +1,4 @@
-export default interface ProjectItem {
+export default interface Project {
 	title: string;
 	description: string;
 	imageSrc: string;

@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type EducationItem from "@/models/EducationItem";
-	import type ExperienceItem from "@/models/ExperienceItem";
+	import type Education from "@/models/Education";
+	import type Experience from "@/models/Experience";
 
 	export default {
 		props: {
 			items: {
-				type: Array<EducationItem | ExperienceItem>,
+				type: Array<Education | Experience>,
 				required: true,
 			},
 		},
@@ -15,16 +15,16 @@
 				return this.items.map((item) => {
 					if ("title" in item) {
 						return {
-							title: (item as ExperienceItem).title,
-							subtitle: (item as ExperienceItem).company,
+							title: (item as Experience).title,
+							subtitle: (item as Experience).company,
 							time: item.time,
 							url: item.url,
 							imageSrc: item.imageSrc,
 						};
 					} else {
 						return {
-							title: (item as EducationItem).course,
-							subtitle: (item as EducationItem).university,
+							title: (item as Education).course,
+							subtitle: (item as Education).university,
 							time: item.time,
 							url: item.url,
 							imageSrc: item.imageSrc,

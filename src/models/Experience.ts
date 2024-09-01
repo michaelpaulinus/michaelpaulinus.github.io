@@ -1,4 +1,4 @@
-export default interface ExperienceItem {
+export default interface Experience {
 	title: string;
 	company: string;
 	time: string;

@@ -7,12 +7,12 @@
 	import imageClassificationImg from "/images/image_classification.jpg";
 	import votecoinImg from "/images/votecoin.png";
 	import androidImg from "/images/android-app.png";
-	import type ProjectItem from "@/models/ProjectItem";
+	import type Project from "@/models/Project";
 
 	export default {
 		data() {
 			return {
-				projects: [] as ProjectItem[],
+				projects: [] as Project[],
 			};
 		},
 
@@ -74,7 +74,7 @@
 					imageSrc: androidImg,
 					url: "https://github.com/michaelpaulinus/SignChat",
 				},
-			] as ProjectItem[];
+			] as Project[];
 		},
 	};
 </script>
