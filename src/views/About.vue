@@ -13,6 +13,7 @@
 	import ContactButton from "@/components/ContactButton.vue";
 	import TimelineList from "@/components/TimelineList.vue";
 	import type SkillItem from "@/models/SkillItem";
+	import { screenview } from "vue-gtag";
 
 	export default {
 		components: {
@@ -156,6 +157,10 @@
 				},
 			];
 		},
+
+		methods: {
+			screenview,
+		},
 	};
 </script>
 
@@ -221,21 +226,45 @@
 							:redirect-link="'mailto:michaelpaulinus@gmail.com'"
 							:prepend-icon="'mdi-gmail'"
 							:text="'Email'"
+							@click="
+								screenview({
+									screen_name: 'Gmail',
+									app_name: 'Michael Paulinus',
+								})
+							"
 						/>
 						<contact-button
 							:redirect-link="'https://github.com/michaelpaulinus'"
 							:prepend-icon="'mdi-github'"
 							:text="'GitHub'"
+							@click="
+								screenview({
+									screen_name: 'GitHub',
+									app_name: 'Michael Paulinus',
+								})
+							"
 						/>
 						<contact-button
 							:redirect-link="'https://www.instagram.com/michael_paulinus/'"
 							:prepend-icon="'mdi-instagram'"
 							:text="'Instagram'"
+							@click="
+								screenview({
+									screen_name: 'Instagram',
+									app_name: 'Michael Paulinus',
+								})
+							"
 						/>
 						<contact-button
 							:redirect-link="'https://www.linkedin.com/in/michaelpaulinus/'"
 							:prepend-icon="'mdi-linkedin'"
 							:text="'LinkedIn'"
+							@click="
+								screenview({
+									screen_name: 'LinkedIn',
+									app_name: 'Michael Paulinus',
+								})
+							"
 						/>
 					</div>
 				</div>
