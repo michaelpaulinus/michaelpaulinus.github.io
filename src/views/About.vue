@@ -54,7 +54,7 @@
 					imageSrc: ukznLogo,
 					url: "https://www.linkedin.com/school/university-of-kwazulu-natal/",
 				},
-			];
+			] as ExperienceItem[];
 
 			this.education = [
 				{
@@ -88,7 +88,7 @@
 					time: "Jun 2024",
 					url: "https://learn.microsoft.com/api/credentials/share/en-us/MichaelPaulinus-9102/F5D31B456427741C?sharingId=A3348AD9AF994697",
 				},
-			];
+			] as EducationItem[];
 
 			this.skills = [
 				{
@@ -155,7 +155,7 @@
 					icon: "mdi-file-document",
 					name: "Documentation",
 				},
-			];
+			] as SkillItem[];
 		},
 
 		methods: {

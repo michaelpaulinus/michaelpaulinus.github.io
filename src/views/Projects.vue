@@ -74,7 +74,7 @@
 					imageSrc: androidImg,
 					url: "https://github.com/michaelpaulinus/SignChat",
 				},
-			];
+			] as ProjectItem[];
 		},
 	};
 </script>
