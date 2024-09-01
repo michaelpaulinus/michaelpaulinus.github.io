@@ -1,18 +1,10 @@
 <script lang="ts">
-	import synthesisLogo from "/images/synthesis_software_technologies_pty_ltd_logo.jpeg";
-	import optinumLogo from "/images/opti_num_solutions_logo.jpeg";
-	import ukznLogo from "/images/ukzn_logo.jpeg";
 	import cradleMoonImg from "/images/cradle-moon.jpeg";
 	import goldReefImg from "/images/gold-reef-city.jpeg";
 	import graduationImg from "/images/graduation.jpg";
-	import awsLogo from "/images/amazon_web_services_logo.jpg";
-	import googleLogo from "/images/google_logo.jpg";
-	import microsoftLogo from "/images/microsoft_logo.jpg";
-	import type Experience from "@/models/Experience";
-	import type Education from "@/models/Education";
 	import ContactButton from "@/components/ContactButton.vue";
 	import TimelineList from "@/components/TimelineList.vue";
-	import type Skill from "@/models/Skill";
+	import { EXPERIENCE, EDUCATION, CERTIFICATIONS, SKILLS } from "@/data/data";
 	import { screenview } from "vue-gtag";
 
 	export default {
@@ -23,139 +15,12 @@
 
 		data() {
 			return {
-				experience: [] as Experience[],
-				education: [] as Education[],
-				certifications: [] as Education[],
-				skills: [] as Skill[],
+				EXPERIENCE,
+				EDUCATION,
+				CERTIFICATIONS,
+				SKILLS,
 				pictures: [cradleMoonImg, goldReefImg, graduationImg],
 			};
-		},
-
-		created() {
-			this.experience = [
-				{
-					title: "Software Engineer",
-					company: "Synthesis Software Technologies",
-					time: "Feb 2024 -",
-					imageSrc: synthesisLogo,
-					url: "https://www.linkedin.com/company/synthesis-software-technologies-pty-ltd/",
-				},
-				{
-					title: "Consultant",
-					company: "Opti-Num Solutions",
-					time: "Jan 2022 - Jan 2024",
-					imageSrc: optinumLogo,
-					url: "https://www.linkedin.com/company/opti-num-solutions/",
-				},
-				{
-					title: "Student Tutor",
-					company: "University of KwaZulu-Natal",
-					time: "Oct 2021 - Dec 2021",
-					imageSrc: ukznLogo,
-					url: "https://www.linkedin.com/school/university-of-kwazulu-natal/",
-				},
-			] as Experience[];
-
-			this.education = [
-				{
-					course: "BSc (Eng) Electronic Engineering",
-					university: "University of KwaZulu-Natal",
-					imageSrc: ukznLogo,
-					time: "Feb 2018 - Dec 2021",
-					url: "https://ww2.ukzn.ac.za/",
-				},
-			];
-
-			this.certifications = [
-				{
-					course: "AWS Certified Cloud Practitioner",
-					university: "Amazon Web Services",
-					imageSrc: awsLogo,
-					time: "Mar 2024",
-					url: "https://www.credly.com/badges/6766c8bb-3374-416e-b98f-324705d96cd3/public_url",
-				},
-				{
-					course: "Cloud Digital Leader",
-					university: "Google Cloud",
-					imageSrc: googleLogo,
-					time: "May 2024",
-					url: "https://www.credly.com/badges/bc2e4d33-18d0-4390-b360-1744a5b567df/public_url",
-				},
-				{
-					course: "Microsoft Certified: Azure Fundamentals",
-					university: "Microsoft",
-					imageSrc: microsoftLogo,
-					time: "Jun 2024",
-					url: "https://learn.microsoft.com/api/credentials/share/en-us/MichaelPaulinus-9102/F5D31B456427741C?sharingId=A3348AD9AF994697",
-				},
-			] as Education[];
-
-			this.skills = [
-				{
-					icon: "mdi-vuejs",
-					name: "Vue.js",
-				},
-				{
-					icon: "mdi-vuetify",
-					name: "Vuetify",
-				},
-				{
-					icon: "mdi-language-typescript",
-					name: "TypeScript",
-				},
-				{
-					icon: "mdi-language-javascript",
-					name: "JavaScript",
-				},
-				{
-					icon: "mdi-language-html5",
-					name: "HTML",
-				},
-				{
-					icon: "mdi-language-css3",
-					name: "CSS",
-				},
-				{
-					icon: "mdi-language-csharp",
-					name: "C#",
-				},
-				{
-					icon: "mdi-dot-net",
-					name: "DotNet",
-				},
-				{
-					icon: "mdi-api",
-					name: "REST APIs",
-				},
-				{
-					icon: "mdi-git",
-					name: "Git",
-				},
-				{
-					icon: "mdi-database",
-					name: "SQL",
-				},
-				{
-					icon: "mdi-aws",
-					name: "AWS",
-				},
-				{
-					icon: "mdi-terraform",
-					name: "Terraform",
-				},
-				{
-					icon: "mdi-google-analytics",
-					name: "Data Analytics",
-				},
-				{
-					icon: "mdi-xml",
-					name: "Web development",
-				},
-				{
-					icon: "mdi-file-document",
-					name: "Documentation",
-				},
-			] as Skill[];
 		},
 
 		methods: {
@@ -285,7 +150,7 @@
 						development industry.
 					</p>
 					<br />
-					<timeline-list :items="experience" />
+					<timeline-list :items="EXPERIENCE" />
 				</div>
 			</div>
 		</div>
@@ -297,7 +162,7 @@
 				<h2>Education</h2>
 			</div>
 			<div class="container-content">
-				<timeline-list :items="education" />
+				<timeline-list :items="EDUCATION" />
 			</div>
 		</div>
 
@@ -308,7 +173,7 @@
 				<h2>Certifications</h2>
 			</div>
 			<div class="container-content">
-				<timeline-list :items="certifications" />
+				<timeline-list :items="CERTIFICATIONS" />
 			</div>
 		</div>
 
@@ -321,7 +186,7 @@
 					:prepend-icon="skill.icon"
 					:text="skill.name"
 					variant="outlined"
-					v-for="skill in skills"
+					v-for="skill in SKILLS"
 					style="margin-inline-end: 0.25rem; margin-block: 0.25rem"
 				/>
 			</div>
