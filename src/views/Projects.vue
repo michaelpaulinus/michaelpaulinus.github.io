@@ -1,7 +1,12 @@
 <script lang="ts">
+	import ProjectCard from "@/components/ProjectCard.vue";
 	import { PROJECTS } from "@/data/data";
 
 	export default {
+		components: {
+			ProjectCard,
+		},
+
 		data() {
 			return {
 				PROJECTS,
@@ -22,30 +27,10 @@
 				bg-color="transparent"
 			>
 				<v-list-item
-					v-for="item in PROJECTS"
-					:key="item.url"
+					v-for="project in PROJECTS"
+					:key="project.url"
 				>
-					<v-card
-						:href="item.url"
-						target="_blank"
-						variant="outlined"
-					>
-						<v-row align="center">
-							<v-col>
-								<v-img
-									:src="item.imageSrc"
-									max-width="auto"
-									max-height="auto"
-								></v-img>
-							</v-col>
-							<v-col>
-								<v-card-title>{{ item.title }}</v-card-title>
-								<v-card-text justify="start">
-									{{ item.description }}</v-card-text
-								>
-							</v-col>
-						</v-row>
-					</v-card>
+					<project-card :item="project" />
 				</v-list-item>
 			</v-list>
 		</div>
