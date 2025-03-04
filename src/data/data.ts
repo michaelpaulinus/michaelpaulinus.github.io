@@ -73,6 +73,13 @@ export const CERTIFICATIONS = [
 		time: "Jun 2024",
 		url: "https://learn.microsoft.com/api/credentials/share/en-us/MichaelPaulinus-9102/F5D31B456427741C?sharingId=A3348AD9AF994697",
 	},
+	{
+		course: "Microsoft Certified: Azure Data Fundamentals",
+		university: "Microsoft",
+		imageSrc: microsoftLogo,
+		time: "Dec 2024",
+		url: "https://learn.microsoft.com/en-za/users/michaelpaulinus-9102/credentials/a1eb35f652e006d6",
+	},
 ] as Education[];
 
 export const SKILLS = [
