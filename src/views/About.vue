@@ -5,7 +5,6 @@
 	import ContactButton from "@/components/ContactButton.vue";
 	import TimelineList from "@/components/TimelineList.vue";
 	import { EXPERIENCE, EDUCATION, CERTIFICATIONS, SKILLS } from "@/data/data";
-	import { screenview } from "vue-gtag";
 
 	export default {
 		components: {
@@ -21,10 +20,6 @@
 				SKILLS,
 				pictures: [cradleMoonImg, goldReefImg, graduationImg],
 			};
-		},
-
-		methods: {
-			screenview,
 		},
 	};
 </script>
@@ -65,13 +60,14 @@
 			</div>
 			<div class="container-content">
 				<p>
-					Hello, my name is Michael Paulinus. I am a Full-Stack Software
-					Engineer with a BSc(Eng) in Electronic Engineering from the University
-					of KwaZulu-Natal. I'm a driven individual that is passionate about
-					creating innovative solutions through code and have worked on various
-					projects using a diverse range of programming languages and
-					technologies including TypeScript, Vue.js, C#, Java, Python and cloud
-					platforms.
+					Hello, my name is Michael Paulinus. I am a Full-Stack
+					Software Engineer with a BSc(Eng) in Electronic Engineering
+					from the University of KwaZulu-Natal. I'm a driven
+					individual that is passionate about creating innovative
+					solutions through code and have worked on various projects
+					using a diverse range of programming languages and
+					technologies including TypeScript, Vue.js, C#, Java, Python
+					and cloud platforms.
 				</p>
 			</div>
 		</div>
@@ -84,52 +80,31 @@
 			</div>
 			<div class="container-content">
 				<div>
-					<p>You can reach out to me on any of the following platforms.</p>
+					<p>
+						You can reach out to me on any of the following
+						platforms.
+					</p>
 					<br />
 					<div class="button-container">
 						<contact-button
 							:redirect-link="'mailto:michaelpaulinus@gmail.com'"
 							:prepend-icon="'mdi-gmail'"
 							:text="'Email'"
-							@click="
-								screenview({
-									screen_name: 'Gmail',
-									app_name: 'Michael Paulinus',
-								})
-							"
 						/>
 						<contact-button
 							:redirect-link="'https://github.com/michaelpaulinus'"
 							:prepend-icon="'mdi-github'"
 							:text="'GitHub'"
-							@click="
-								screenview({
-									screen_name: 'GitHub',
-									app_name: 'Michael Paulinus',
-								})
-							"
 						/>
 						<contact-button
 							:redirect-link="'https://www.instagram.com/michael_paulinus/'"
 							:prepend-icon="'mdi-instagram'"
 							:text="'Instagram'"
-							@click="
-								screenview({
-									screen_name: 'Instagram',
-									app_name: 'Michael Paulinus',
-								})
-							"
 						/>
 						<contact-button
 							:redirect-link="'https://www.linkedin.com/in/michaelpaulinus/'"
 							:prepend-icon="'mdi-linkedin'"
 							:text="'LinkedIn'"
-							@click="
-								screenview({
-									screen_name: 'LinkedIn',
-									app_name: 'Michael Paulinus',
-								})
-							"
 						/>
 					</div>
 				</div>
@@ -146,8 +121,8 @@
 				<div>
 					<p>
 						I've been working for
-						{{ Number(new Date().getFullYear()) - 2022 }}+ years in the software
-						development industry.
+						{{ Number(new Date().getFullYear()) - 2022 }}+ years in
+						the software development industry.
 					</p>
 					<br />
 					<timeline-list :items="EXPERIENCE" />
