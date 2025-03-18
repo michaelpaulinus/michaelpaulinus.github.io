@@ -113,7 +113,7 @@ export const SKILLS = [
 	},
 	{
 		icon: "mdi-dot-net",
-		name: "ASP.NET",
+		name: ".NET",
 	},
 	{
 		icon: "mdi-api",
@@ -145,7 +145,7 @@ export const SKILLS = [
 	},
 	{
 		icon: "mdi-xml",
-		name: "Web development",
+		name: "Web Development",
 	},
 ] as Skill[];
 
