@@ -2,6 +2,7 @@
 	import cradleMoonImg from "/images/cradle-moon.jpeg";
 	import goldReefImg from "/images/gold-reef-city.jpeg";
 	import graduationImg from "/images/graduation.jpg";
+	import montecasinoImg from "/images/montecasino.jpeg";
 	import ContactButton from "@/components/ContactButton.vue";
 	import TimelineList from "@/components/TimelineList.vue";
 	import { EXPERIENCE, EDUCATION, CERTIFICATIONS, SKILLS } from "@/data/data";
@@ -18,7 +19,12 @@
 				EDUCATION,
 				CERTIFICATIONS,
 				SKILLS,
-				pictures: [cradleMoonImg, goldReefImg, graduationImg],
+				pictures: [
+					cradleMoonImg,
+					goldReefImg,
+					graduationImg,
+					montecasinoImg,
+				],
 			};
 		},
 	};
