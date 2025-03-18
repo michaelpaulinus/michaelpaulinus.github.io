@@ -88,8 +88,8 @@ export const SKILLS = [
 		name: "Vue.js",
 	},
 	{
-		icon: "mdi-vuetify",
-		name: "Vuetify",
+		icon: "mdi-angular",
+		name: "Angular",
 	},
 	{
 		icon: "mdi-language-typescript",
@@ -113,7 +113,7 @@ export const SKILLS = [
 	},
 	{
 		icon: "mdi-dot-net",
-		name: "DotNet",
+		name: "ASP.NET",
 	},
 	{
 		icon: "mdi-api",
@@ -136,16 +136,16 @@ export const SKILLS = [
 		name: "Terraform",
 	},
 	{
+		icon: "mdi-handshake",
+		name: "Client Interactions",
+	},
+	{
 		icon: "mdi-google-analytics",
 		name: "Data Analytics",
 	},
 	{
 		icon: "mdi-xml",
 		name: "Web development",
-	},
-	{
-		icon: "mdi-file-document",
-		name: "Documentation",
 	},
 ] as Skill[];
 
