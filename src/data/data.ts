@@ -121,7 +121,7 @@ export const SKILLS = [
 	},
 	{
 		icon: "mdi-dot-net",
-		name: ".NET",
+		name: ".NET Framework",
 	},
 	{
 		icon: "mdi-api",
@@ -144,16 +144,16 @@ export const SKILLS = [
 		name: "Terraform",
 	},
 	{
+		icon: "mdi-cloud-outline",
+		name: "Cloud Computing",
+	},
+	{
 		icon: "mdi-handshake",
 		name: "Client Interactions",
 	},
 	{
-		icon: "mdi-google-analytics",
-		name: "Data Analytics",
-	},
-	{
 		icon: "mdi-xml",
-		name: "Web Development",
+		name: "Web Dev",
 	},
 ] as Skill[];
 
