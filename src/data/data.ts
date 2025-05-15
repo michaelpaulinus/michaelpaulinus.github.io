@@ -4,6 +4,7 @@ import ukznLogo from "/images/ukzn_logo.jpeg";
 import awsLogo from "/images/amazon_web_services_logo.jpg";
 import googleLogo from "/images/google_logo.jpg";
 import microsoftLogo from "/images/microsoft_logo.jpg";
+import hashicorpLogo from "/images/hashicorp_logo.jpg";
 import randRatesImg from "/images/rand_rates.jpg";
 import spotiTrackerImg from "/images/spoti_tracker.webp";
 import footyPotyImg from "/images/footy_poty.png";
@@ -79,6 +80,13 @@ export const CERTIFICATIONS = [
 		imageSrc: microsoftLogo,
 		time: "Dec 2024",
 		url: "https://learn.microsoft.com/en-za/users/michaelpaulinus-9102/credentials/a1eb35f652e006d6",
+	},
+	{
+		course: "HashiCorp Certified: Terraform Associate (003)",
+		university: "HashiCorp",
+		imageSrc: hashicorpLogo,
+		time: "May 2025",
+		url: "https://www.credly.com/earner/earned/badge/887d9234-466f-4392-bb88-8e11efafef59",
 	},
 ] as Education[];
 
