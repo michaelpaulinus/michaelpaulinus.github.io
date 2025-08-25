@@ -1,3 +1,4 @@
+import entelectLogo from "./images/entelect_logo.jpeg";
 import synthesisLogo from "/images/synthesis_software_technologies_pty_ltd_logo.jpeg";
 import optinumLogo from "/images/opti_num_solutions_logo.jpeg";
 import ukznLogo from "/images/ukzn_logo.jpeg";
@@ -18,11 +19,18 @@ import type Education from "@/models/Education";
 import type Skill from "@/models/Skill";
 import type Project from "@/models/Project";
 
-export const EXPERIENCE = [
+export const EXPERIENCE: Experience[] = [
+	{
+		title: "Intermediate Software Engineer",
+		company: "Entelect",
+		time: "Jul 2025 -",
+		imageSrc: entelectLogo,
+		url: "https://www.linkedin.com/company/entelect/",
+	},
 	{
 		title: "Software Engineer",
 		company: "Synthesis Software Technologies",
-		time: "Feb 2024 -",
+		time: "Feb 2024 - Jun 2025",
 		imageSrc: synthesisLogo,
 		url: "https://www.linkedin.com/company/synthesis-software-technologies-pty-ltd/",
 	},
@@ -40,7 +48,7 @@ export const EXPERIENCE = [
 		imageSrc: ukznLogo,
 		url: "https://www.linkedin.com/school/university-of-kwazulu-natal/",
 	},
-] as Experience[];
+];
 
 export const EDUCATION = [
 	{
@@ -52,7 +60,7 @@ export const EDUCATION = [
 	},
 ];
 
-export const CERTIFICATIONS = [
+export const CERTIFICATIONS: Education[] = [
 	{
 		course: "AWS Certified Cloud Practitioner",
 		university: "Amazon Web Services",
@@ -88,9 +96,13 @@ export const CERTIFICATIONS = [
 		time: "May 2025",
 		url: "https://www.credly.com/earner/earned/badge/887d9234-466f-4392-bb88-8e11efafef59",
 	},
-] as Education[];
+];
 
-export const SKILLS = [
+export const SKILLS: Skill[] = [
+	{
+		icon: "mdi-react",
+		name: "React.js",
+	},
 	{
 		icon: "mdi-vuejs",
 		name: "Vue.js",
@@ -155,9 +167,9 @@ export const SKILLS = [
 		icon: "mdi-xml",
 		name: "Web Dev",
 	},
-] as Skill[];
+];
 
-export const PROJECTS = [
+export const PROJECTS: Project[] = [
 	{
 		title: "Rand Rates",
 		description:
@@ -214,4 +226,4 @@ export const PROJECTS = [
 		imageSrc: androidImg,
 		url: "https://github.com/michaelpaulinus/SignChat",
 	},
-] as Project[];
+];
