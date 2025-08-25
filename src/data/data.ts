@@ -1,4 +1,4 @@
-import entelectLogo from "./images/entelect_logo.jpeg";
+import entelectLogo from "/images/entelect_logo.jpeg";
 import synthesisLogo from "/images/synthesis_software_technologies_pty_ltd_logo.jpeg";
 import optinumLogo from "/images/opti_num_solutions_logo.jpeg";
 import ukznLogo from "/images/ukzn_logo.jpeg";
